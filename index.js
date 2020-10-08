@@ -26,11 +26,11 @@ Task 1b: Do the following:
 
    HINT: no function required
 */
-let a = 15;
-let b = 10;
+let name1 = 15;
+let name2 = 10;
 
-if (b < 16) {
-  console.log(a + 5)
+if (name2 < 16) {
+  console.log(name1 + 5)
 }
 
 
@@ -47,6 +47,9 @@ Task 1c: Do the following:
 */
 
 
+var year = "1999"
+
+console.log(Number(year))
 
 
 /*
@@ -60,9 +63,13 @@ Task 1d: Do the following:
    HINT: if you want to see the answer console log the invocation of multiply
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+
+
+function multiply(as, bs){
+    return(as * bs);
   }
+
+multiply(2, 6)
 
 
 
@@ -78,9 +85,13 @@ Do the following:
    HINT: if you want to see the answer console log the invocation of dogYears
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+let humanAge = 20
+
+function dogYears(){
+    return (humanAge * 7);
 }
+
+console.log(dogYears());
 
 
 
@@ -102,10 +113,38 @@ function dogYears(/*add your code here*/){
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
+//if age <== 12 months return puppie
+//if age >== 13 months return dog
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+
+function hungryDog(weight, age){
+    if (age >= 1 && weight <= 5) {
+      return weight * 0.05;
+    }
+    else if (age >= 1 && weight >= 6 && weight <= 10) {
+      return weight * .04;
+    }
+    else if (age >= 1 && weight >= 11 && weight <= 15) {
+      return weight * .03;
+    }
+    else if (age >= 1 && weight >= 15) {
+      return weight * .02
+    }
+    else if (age < 1 && age >= .583) {
+      return weight * .04
+    }
+    else if (age <= .583 && age >= .333) {
+      return weight * .05
+    }
+    else if (age < .333 ) {
+      return weight * .1
+    }
+    else {
+      return 'please try again'
+    }
   }
+console.log(hungryDog(15, 1))
+
 
 
 
