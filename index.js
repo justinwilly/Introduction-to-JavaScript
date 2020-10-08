@@ -155,9 +155,39 @@ console.log(hungryDog(15, 1))
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
+//if paper beat rock > lose scissors
+//if rock beat scissors > lose paper
+//if scissors beat paper > lose rock
+//math.numer(math.random)
 
-function game(/*add your code here*/){
-    /*add your code here*/
+let computer = Math.random();
+  if(computer <= .34 ) {
+    computer = "rock"
+  }
+  else if(computer <= .67) {
+    computer = "paper"
+  }
+  else if(computer > .67) {
+    computer = "scissors"
+  }
+
+
+function game(user, computer){
+  if (user === computer) {
+    return 'its a tie!'
+  }
+  else if(user === 'rock' && computer === 'scissors') {
+    return 'you win!'
+  }
+  else if(user === 'paper' && computer === 'rock'){
+    return 'you win!'
+  }
+  else if(user === 'scissors' && computer === 'paper'){
+    return 'you win!'
+  }
+  else {
+    return 'you lose!!'
+  }
 }
   
   
